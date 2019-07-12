@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text"/>
+    <ol>
+        <li v-for="item in data">{{item}}</li>
+    </ol>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    var data = require('./data.json')
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            data: data
+        }
+    })
+</script>
+</body>
+</html>
